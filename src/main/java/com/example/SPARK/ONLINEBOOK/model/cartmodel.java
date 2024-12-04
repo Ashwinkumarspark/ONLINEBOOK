@@ -1,7 +1,9 @@
 package com.example.SPARK.ONLINEBOOK.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "carts")
 public class cartmodel {
     @Id
     private String id;
