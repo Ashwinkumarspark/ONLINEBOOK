@@ -13,7 +13,5 @@ public interface ordermodelrepo extends MongoRepository<ordermodel, String>{
 
     ordermodelrepo  repo = null;
 
-    public default List<ordermodel> GetAllorders(){
-        return repo.findAll();
-    }
+    List<ordermodel> FindByUserId (String userId);
 }
