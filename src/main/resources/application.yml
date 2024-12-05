@@ -1,0 +1,5 @@
+Spring:
+  data:
+    Mongodb:
+    uri: mongodb://localhost:27017/Ashwin
+    database: Book
