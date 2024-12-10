@@ -1,16 +1,16 @@
 package com.example.SPARK.ONLINEBOOK.dal;
 
-import com.example.SPARK.ONLINEBOOK.model.bookmodel;
-import com.example.SPARK.ONLINEBOOK.model.ordermodel;
+import com.example.SPARK.ONLINEBOOK.model.BookModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface bookmodelrepo extends MongoRepository<bookmodel, String> {
+public interface BookModelRepo extends MongoRepository<BookModel, String> {
 
-    List<bookmodel> FindByAuthor (String author);
+    public Optional<BookModel> findByTitle (String title);
 
 }

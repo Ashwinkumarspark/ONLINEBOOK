@@ -4,10 +4,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "carts")
-public class cartmodel {
+public class CartModel {
     @Id
     private String id;
-    private Integer userId;
+    private String userId;
     private String cartItems;
     private Integer totalAmount;
 
@@ -19,11 +19,11 @@ public class cartmodel {
         this.id = id;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -43,7 +43,7 @@ public class cartmodel {
         this.totalAmount = totalAmount;
     }
 
-    public cartmodel(String id, Integer userId, String cartItems, Integer totalAmount) {
+    public CartModel(String id, String userId, String cartItems, Integer totalAmount) {
         this.id = id;
         this.userId = userId;
         this.cartItems = cartItems;

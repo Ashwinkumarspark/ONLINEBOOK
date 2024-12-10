@@ -1,21 +1,21 @@
 package com.example.SPARK.ONLINEBOOK.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 @Document(collection = "orders")
-public class ordermodel {
+public class OrderModel {
     @Id
     private String id;
-    private Integer userId;
-    private Date orderDate;
+    private String userId;
+    private String orderDate;
     private String status;
     private  Long totalAmount;
     private String orderItems ;
 
-    public ordermodel(String id, Integer userId, Date orderDate, String status, Long totalAmount, String orderItems) {
+    public OrderModel(String id, String userId, String orderDate, String status, Long totalAmount, String orderItems) {
         this.id = id;
         this.userId = userId;
         this.orderDate = orderDate;
@@ -32,19 +32,19 @@ public class ordermodel {
         this.id = id;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 

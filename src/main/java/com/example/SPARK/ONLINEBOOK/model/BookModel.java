@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 @Document(collection = "books")
-public class bookmodel {
+public class BookModel {
     @Id
     private String id;
     private String title;
@@ -16,7 +16,7 @@ public class bookmodel {
     private Date publishedDate;
     private String stock;
 
-    public bookmodel(String id, String title, String author, Integer price, String description, String genre, Date publishedDate, String stock) {
+    public BookModel(String id, String title, String author, Integer price, String description, String genre, Date publishedDate, String stock) {
         this.id = id;
         this.title = title;
         this.author = author;

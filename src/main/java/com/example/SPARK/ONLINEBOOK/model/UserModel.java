@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "users")
-public class usermodel {
+public class UserModel {
 
     @Id
     private String id;
@@ -14,7 +14,7 @@ public class usermodel {
     private String role;
     private String address;
 
-    public usermodel(String id, String name, String email, String password, String role, String address) {
+    public UserModel(String id, String name, String email, String password, String role, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
